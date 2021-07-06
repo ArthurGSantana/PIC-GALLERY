@@ -1,23 +1,27 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
+import { AppRoutingModule } from '../../../app-routing.module';
 import { MaterialModule } from './../../../material-module.module';
 import { PainelGaleriaComponent } from './painel-galeria.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WelcomeModalComponent } from './../../../shared/modais/welcomeModal/welcomeModal.component';
 
 @NgModule({
     declarations: [
       PainelGaleriaComponent,
       HeaderComponent,
-      FooterComponent
+      FooterComponent,
+      WelcomeModalComponent
     ],
     exports: [
 
     ],
     imports: [
       CommonModule,
-      MaterialModule
+      MaterialModule,
+      AppRoutingModule
     ]
 })
 export class PainelGaleriaModule { }

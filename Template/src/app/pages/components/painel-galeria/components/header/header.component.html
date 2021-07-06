@@ -1,10 +1,23 @@
 <mat-toolbar class="toolbar">
   <section class="toolbar-container">
-    <button mat-mini-fab class="menu-button">
+    <button mat-mini-fab [matMenuTriggerFor]="menu" class="menu-button">
       <span>
         <i class="material-icons">menu</i>
       </span>
     </button>
+
+    <!--opções do menu-->
+    <mat-menu #menu="matMenu" class="menu" color="primary">
+      <button mat-menu-item [routerLink]="['/home']">
+        <span>Página Home</span>
+      </button>
+      <button mat-menu-item>
+        <span>Novas Fotografias</span>
+      </button>
+      <button mat-menu-item>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
 
     <div class="title">
       <h1>PIC-GALLERY</h1>
