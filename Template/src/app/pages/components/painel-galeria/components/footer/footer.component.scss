@@ -1,0 +1,34 @@
+$gradient: linear-gradient(to right, purple , rgb(233, 153, 4));
+$toolbar-color: rgb(250, 241, 241);
+
+section {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  .top {
+    width: 100%;
+    height: 3px;
+    background-image: $gradient;
+  }
+
+  .toolbar {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $toolbar-color;
+
+    .texto {
+      user-select: none;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      background-image: $gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}
+

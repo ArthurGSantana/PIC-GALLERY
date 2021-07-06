@@ -1,0 +1,62 @@
+<mat-card class="card">
+  <mat-card-title class="title">
+    <span>Cadastre-se para contribuir com suas fotografias!</span>
+  </mat-card-title>
+
+  <mat-card-content class="content">
+    <form [formGroup]="cadastroUsuario" (ngSubmit)="onSubmit()">
+
+      <div class="icon">
+        <i class="material-icons criar">create</i>
+      </div>
+
+      <div style="margin-top: 15px;">
+        <i class="material-icons">person</i>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input
+            matInput
+            placeholder="Digite seu nome..."
+            formControlName="nome">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <i class="material-icons">email</i>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input
+            matInput
+            placeholder="Digite seu e-mail..."
+            formControlName="email">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <i class="material-icons">vpn_key</i>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input
+            type="password"
+            matInput
+            placeholder="Digite sua senha..."
+            formControlName="senha">
+        </mat-form-field>
+      </div>
+
+      <div class="btn-container">
+        <button mat-raised-button class="btn" type="submit">Cadastrar</button>
+      </div>
+
+      <div class="texto">
+        <span>Já tem um cadastro?</span>
+      </div>
+
+      <div class="login-container">
+        <button mat-raised-button class="login">Entrar</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+
+</mat-card>
