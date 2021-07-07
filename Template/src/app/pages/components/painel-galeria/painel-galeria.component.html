@@ -1,3 +1,10 @@
 <pic-header></pic-header>
 
+<section *ngIf="imagens">
+  <div *ngFor="let img of imagens" [class.topImagens]="imagens.length < 4">
+    <pic-photo [dadosImagem]="img"></pic-photo>
+  </div>
+</section>
+
 <pic-footer></pic-footer>
+

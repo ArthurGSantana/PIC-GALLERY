@@ -7,13 +7,15 @@ import { PainelGaleriaComponent } from './painel-galeria.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WelcomeModalComponent } from './../../../shared/modais/welcomeModal/welcomeModal.component';
+import { PhotoComponent } from './components/photo/photo.component';
 
 @NgModule({
     declarations: [
       PainelGaleriaComponent,
       HeaderComponent,
       FooterComponent,
-      WelcomeModalComponent
+      WelcomeModalComponent,
+      PhotoComponent
     ],
     exports: [
 
