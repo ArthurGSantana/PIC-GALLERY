@@ -8,6 +8,7 @@ import { HomeInfoComponent } from './components/home-info/home-info.component';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
 import { MaterialModule } from './../../../material-module.module';
 import { HomeCadastroComponent } from './components/home-cadastro/home-cadastro.component';
+import { LoadingModalModule } from './../../../shared/modais/loadingModal/loadingModel.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { HomeCadastroComponent } from './components/home-cadastro/home-cadastro.
     MaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    LoadingModalModule
   ],
   declarations: [
     HomeComponent,

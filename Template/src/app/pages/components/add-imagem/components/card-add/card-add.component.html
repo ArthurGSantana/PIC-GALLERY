@@ -1,0 +1,66 @@
+<div class="card-container">
+  <mat-card class="card">
+    <mat-card-title class="title">
+      Adicionar nova fotografia
+    </mat-card-title>
+
+    <mat-card-content>
+      <div class="content">
+        <div class="form-container">
+          <form [formGroup]="imageForm">
+            <div class="textarea">
+              <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Descrição da Foto</mat-label>
+                <textarea
+                  matInput
+                  placeholder="Digite a descrição..."
+                  formControlName="descricao"></textarea>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <button
+                mat-raised-button
+                immediateClick
+                type="button"
+                (click)="input.click()">
+                Procurar Imagem
+              </button>
+
+              <input
+                type="file"
+                #input
+                hidden
+                accept="image/*"
+                formControlName="file"
+                (change)="getFileImage($event.target.files[0])">
+              </div>
+            </form>
+
+            <mat-card class="card-descricao">
+              <span>
+                Certifique-se de dar uma boa descrição a sua foto!
+              </span>
+            </mat-card>
+
+        </div>
+
+        <div class="preview-container">
+          <span>Preview da Imagem</span>
+          <div class="img-box">
+            <img [src]="preview" *ngIf="preview">
+          </div>
+          <button
+            mat-raised-button
+            [disabled]="imageForm.invalid"
+            (click)="openDialog()">
+            <span>
+              Adicionar na Galeria
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

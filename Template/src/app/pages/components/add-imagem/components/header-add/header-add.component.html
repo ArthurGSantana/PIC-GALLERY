@@ -1,0 +1,21 @@
+<mat-toolbar class="toolbar">
+  <section class="toolbar-container">
+    <button mat-mini-fab class="back-button" [routerLink]="['/painel-galeria']" (click)="openLoading()">
+      <span>
+        <i class="material-icons">arrow_back</i>
+      </span>
+    </button>
+
+    <div class="title">
+      <h1>PIC-GALLERY</h1>
+    </div>
+
+    <button mat-mini-fab class="help-button" (click)="openDialog()">
+      <h1>?</h1>
+    </button>
+
+  </section>
+</mat-toolbar>
+<div class="bottom"></div>
+
+

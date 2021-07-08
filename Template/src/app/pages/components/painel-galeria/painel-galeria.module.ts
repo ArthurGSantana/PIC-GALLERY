@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WelcomeModalComponent } from './../../../shared/modais/welcomeModal/welcomeModal.component';
 import { PhotoComponent } from './components/photo/photo.component';
+import { DisplayImagensComponent } from './components/display-imagens/display-imagens.component';
+import { FiltrarImagens } from './filtra-imagens.pipe';
 
 @NgModule({
     declarations: [
@@ -15,10 +17,12 @@ import { PhotoComponent } from './components/photo/photo.component';
       HeaderComponent,
       FooterComponent,
       WelcomeModalComponent,
-      PhotoComponent
+      PhotoComponent,
+      DisplayImagensComponent,
+      FiltrarImagens
     ],
     exports: [
-
+      FooterComponent
     ],
     imports: [
       CommonModule,

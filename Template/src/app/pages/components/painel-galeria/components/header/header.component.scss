@@ -2,10 +2,12 @@ $gradient: linear-gradient(to right, purple , rgb(233, 153, 4));
 $toolbar-color: rgb(250, 241, 241);
 
 .toolbar {
+  z-index: 100;
   position: fixed;
   background-color: $toolbar-color;
   padding: 0;
   height: 60px;
+  width: 100%;
 
   .toolbar-container {
     width: 100%;

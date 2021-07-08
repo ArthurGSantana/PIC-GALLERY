@@ -1,6 +1,6 @@
 <div class="container">
 
-  <img src="../../../../../../assets/imagens/pic-home-fundo.png" alt="imagem fotografia">
+  <img [src]="url" alt="imagem fotografia">
 
   <mat-card class="card">
     <mat-card-content class="content">
@@ -8,7 +8,7 @@
     </mat-card-content>
   </mat-card>
 
-  <button mat-raised-button class="btn" [routerLink]="['/painel-galeria']">
+  <button mat-raised-button class="btn" [routerLink]="['/painel-galeria']" (click)="openLoading()">
     <span>Ir para Galeria</span>
     <i class="material-icons">arrow_forward</i>
   </button>

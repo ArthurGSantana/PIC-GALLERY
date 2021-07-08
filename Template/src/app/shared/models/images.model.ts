@@ -1,5 +1,7 @@
 export interface ImagesModel {
-  id: number;
+  id?: number;
   descricao: string;
+  curtidas: number;
+  visualizacao: number;
   imagem: string;
 }

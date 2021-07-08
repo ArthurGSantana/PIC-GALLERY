@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PainelGaleriaModule } from './pages/components/painel-galeria/painel-galeria.module';
 import { HomeModule } from './pages/components/home/home.module';
+import { AddImagemModule } from './pages/components/add-imagem/add-imagem.module';
 
 
 
@@ -16,11 +17,12 @@ import { HomeModule } from './pages/components/home/home.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     PainelGaleriaModule,
     HomeModule,
-    HttpClientModule
+    AddImagemModule
   ],
   exports: [
   ],

@@ -1,4 +1,57 @@
-.topImagens {
-  
+$border-color: rgb(153, 65, 153);
+
+.img-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .div-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .div-img {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.estilo-topo {
+  margin-top: -60px !important;
+  //margin-bottom: 30px !important;
+}
+
+nav {
+  user-select: none;
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    i {
+      margin-top: -15px;
+      color: $border-color;
+      font-weight: 800;
+      font-size: 2.2rem;
+    }
+
+    .form-field {
+      width: 85%;
+    }
+  }
 }
 

@@ -15,12 +15,13 @@ export class PhotoComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    console.log('abriu');
-
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.url = `data:image/png;base64,${this.dadosImagem.imagem}`;
-    console.log(this.dadosImagem);
-  }
+    if(this.dadosImagem?.imagem?.startsWith("data")) {
+      this.url = this.dadosImagem.imagem;
+    } else {
+      this.url = `data:image/png;base64,${this.dadosImagem.imagem}`;
+    };
+  };
 }

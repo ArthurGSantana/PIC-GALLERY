@@ -1,0 +1,129 @@
+$border-color: rgb(148, 14, 148);
+$toolbar-color: rgb(250, 241, 241);
+$gradient: linear-gradient(to right, purple , rgb(233, 153, 4));
+
+.card-container {
+  margin-top: 40px;
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: $gradient;
+
+  .card {
+    user-select: none;
+    background-color: $toolbar-color;
+    height: 90%;
+    width: 92%;
+    border-radius: 20px;
+    overflow: auto;
+
+    .title {
+      color: $border-color;
+      font-weight: bolder;
+      font-size: 1.8rem;
+    }
+
+    .content {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .form-container {
+        width: 50%;
+        height: 100%;
+
+        .textarea {
+          margin-top: 50px;
+          width: 100%;
+
+          .form-field {
+            width: 85%;
+
+            textarea {
+              height: 100px;
+              resize: none;
+            }
+          }
+        }
+
+        button {
+          margin-top: 20px;
+          width: 85%;
+          height: 50px;
+          color: white;
+          background-color: $border-color;
+        }
+
+        .card-descricao {
+          margin-top: 35px;
+          width: 76%;
+          border: 2px solid $border-color;
+          border-radius: 10px;
+
+          span {
+            color: $border-color;
+            font-size: 1rem;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .preview-container {
+        margin-top: 20px;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          color: $border-color;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+
+        .img-box {
+          width: 90%;
+          height: 300px;
+          border: 4px dashed $border-color;
+          background-color: rgba(235, 233, 233, 0.719);
+
+          img {
+            image-rendering: pixelated;
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        button {
+          //margin-left: -1px;
+          width: 92%;
+          height: 60px;
+          border: 3px solid $border-color;
+          border-radius: 0 0 10px 10px;
+          border-top: 0;
+
+          span {
+            color: purple;
+            font-weight: bold;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 950px){
+  .form-container, .preview-container {
+    width: 100% !important;
+  }
+}
+

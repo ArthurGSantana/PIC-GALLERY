@@ -1,0 +1,9 @@
+$border-color: rgb(153, 65, 153);
+
+div {
+  span {
+    color: $border-color;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}

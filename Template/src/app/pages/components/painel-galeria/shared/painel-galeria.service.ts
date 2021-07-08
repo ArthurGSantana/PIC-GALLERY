@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 import { ImagesRepository } from './../../../../shared/repository/images.repository';
@@ -8,6 +8,8 @@ import { ImagesModel } from 'src/app/shared/models/images.model';
   providedIn: 'root'
 })
 export class PainelGaleriaService {
+
+  debounce: Subject<string> = new Subject<string>();
 
   constructor (
     private imagemRepository: ImagesRepository

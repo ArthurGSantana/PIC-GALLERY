@@ -1,0 +1,20 @@
+<div *ngFor="let img of arrayImagens" class="display-img"
+  [class.espacamento]="img === arrayImagens[arrayImagens.length - 1]">
+
+  <pic-photo [dadosImagem]="img"></pic-photo>
+
+  <footer>
+    <div>
+      <i class="material-icons">favorite</i>
+      <span>
+        {{img?.curtidas}}
+      </span>
+    </div>
+    <div>
+      <i class="material-icons">visibility</i>
+      <span>
+        {{img?.visualizacao}}
+      </span>
+    </div>
+  </footer>
+</div>

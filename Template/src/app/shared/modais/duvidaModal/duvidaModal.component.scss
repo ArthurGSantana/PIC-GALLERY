@@ -1,0 +1,14 @@
+$border-color: rgb(148, 14, 148);
+$gradient: linear-gradient(to right, purple , rgb(233, 153, 4));
+
+h2{
+  color: $border-color;
+
+  strong {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
