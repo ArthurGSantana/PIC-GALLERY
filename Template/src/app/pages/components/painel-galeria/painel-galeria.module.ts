@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { AppRoutingModule } from '../../../app-routing.module';
+import { PainelGaleriaRoutingModule } from './painel-galeria-routing.module';
 import { MaterialModule } from './../../../material-module.module';
 import { PainelGaleriaComponent } from './painel-galeria.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -27,7 +27,7 @@ import { FiltrarImagens } from './filtra-imagens.pipe';
     imports: [
       CommonModule,
       MaterialModule,
-      AppRoutingModule
+      PainelGaleriaRoutingModule
     ]
 })
 export class PainelGaleriaModule { }
