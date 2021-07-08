@@ -8,13 +8,13 @@
 
     <!--opções do menu-->
     <mat-menu #menu="matMenu" class="menu" color="primary">
-      <button mat-menu-item [routerLink]="['/home']">
+      <button mat-menu-item [routerLink]="['/home']" >
         <span>Página Home</span>
       </button>
       <button mat-menu-item (click)="emitirRecentes()">
         <span>Inverter Ordem</span>
       </button>
-      <button mat-menu-item [routerLink]="['/add-imagem']">
+      <button mat-menu-item [routerLink]="['/add-imagem']" >
         <span>Adicionar Foto</span>
       </button>
     </mat-menu>

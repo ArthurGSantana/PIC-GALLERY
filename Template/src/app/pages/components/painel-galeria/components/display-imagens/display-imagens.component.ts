@@ -1,8 +1,11 @@
 import { Subscription } from 'rxjs';
 import { Component, Input, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
+import { VisualizarImagemComponent } from './../visualizar-imagem/visualizar-imagem.component';
 import { HeaderService } from './../header/shared/header.service';
 import { ImagesModel } from 'src/app/shared/models/images.model';
+import { PainelGaleriaService } from './../../shared/painel-galeria.service';
 
 @Component({
   selector: 'pic-display-imagens',
@@ -16,7 +19,9 @@ export class DisplayImagensComponent implements OnInit, AfterViewInit, OnDestroy
   recentSubscribe: Subscription = new Subscription();
 
   constructor(
-    private headerService: HeaderService
+    private headerService: HeaderService,
+    private dialog: MatDialog,
+    private painelGaleriaService: PainelGaleriaService
   ) { }
 
   ngOnInit() {
@@ -31,5 +36,10 @@ export class DisplayImagensComponent implements OnInit, AfterViewInit, OnDestroy
   ngOnDestroy(): void {
     this.recentSubscribe.unsubscribe();
   }
+
+  openImage(img: ImagesModel): void {
+    this.painelGaleriaService.abrirImagemEvent.next(img);
+    this.dialog.open(VisualizarImagemComponent);
+  };
 
 }

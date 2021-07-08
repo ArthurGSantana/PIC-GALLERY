@@ -25,10 +25,17 @@ export class ImagesRepository {
   };
 
   postImagemPainel(imagem: ImagesModel): Observable<ImagesModel>{
-    //console.log(imagem);
     return this.http.post<ImagesModel>(this.url, JSON.stringify(imagem), this.httpOptions)
       .pipe(
         retry(2),
+        catchError(this.handleError)
+      )
+  };
+
+  updateImagemPainel(imagem: ImagesModel): Observable<ImagesModel>{
+    return this.http.put<ImagesModel>(`${this.url}/${imagem.id}`, JSON.stringify(imagem), this.httpOptions)
+      .pipe(
+        retry(1),
         catchError(this.handleError)
       )
   };

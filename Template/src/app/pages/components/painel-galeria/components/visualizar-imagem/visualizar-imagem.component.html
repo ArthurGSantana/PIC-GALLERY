@@ -1,0 +1,19 @@
+<div class="display-img">
+
+  <pic-photo [dadosImagem]="imagemVisualizada"></pic-photo>
+
+  <footer>
+    <div>
+      <i
+        class="material-icons"
+        (click)="likePress()">
+
+        {{ pressLike && iconPress || icon}}
+
+      </i>
+      <span>
+        {{imagemVisualizada?.curtidas}}
+      </span>
+    </div>
+  </footer>
+</div>

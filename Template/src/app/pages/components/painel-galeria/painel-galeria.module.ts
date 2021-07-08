@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
+import { VisualizarImagemComponent } from './components/visualizar-imagem/visualizar-imagem.component';
 import { PainelGaleriaRoutingModule } from './painel-galeria-routing.module';
 import { MaterialModule } from './../../../material-module.module';
 import { PainelGaleriaComponent } from './painel-galeria.component';
@@ -19,7 +20,8 @@ import { FiltrarImagens } from './filtra-imagens.pipe';
       WelcomeModalComponent,
       PhotoComponent,
       DisplayImagensComponent,
-      FiltrarImagens
+      FiltrarImagens,
+      VisualizarImagemComponent
     ],
     exports: [
       FooterComponent
