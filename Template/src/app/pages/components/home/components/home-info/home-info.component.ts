@@ -1,7 +1,7 @@
-import { ThisReceiver } from '@angular/compiler';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
-import { HomeService } from './../shared/home.service';
+import { HomeService } from '../../shared/home.service';
 
 @Component({
   selector: 'pic-home-info',
@@ -12,17 +12,16 @@ export class HomeInfoComponent implements OnInit {
 
   startUrl: string = 'data:image/jpeg;base64,'
   url: string;
+  dadosImagem: any;
 
   constructor(
-    private homeService: HomeService
+    private homeService: HomeService,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.homeService.getImagemHome().subscribe(dadoImagem => {
-      console.log(dadoImagem);
-
-      this.url = `${this.startUrl}${dadoImagem.imagem}`
-    })
+    this.dadosImagem = this.activatedRoute.snapshot.data['imagemHome'];
+    this.url = `${this.startUrl}${this.dadosImagem.imagem}`;
   }
 
   openLoading(): void {

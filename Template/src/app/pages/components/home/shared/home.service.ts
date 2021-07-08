@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { ImagesRepository } from './../../../../../shared/repository/images.repository';
+import { ImagesRepository } from '../../../../shared/repository/images.repository';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
