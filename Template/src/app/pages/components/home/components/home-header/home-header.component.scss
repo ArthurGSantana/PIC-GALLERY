@@ -31,8 +31,12 @@ $toolbar-color: rgb(250, 241, 241);
   }
 }
 
-@media(max-width: 600px){
-  span {
-    font-size: 1.4rem !important;
+@media screen and (max-width: 1024px){
+  .toolbar {
+    width: auto;
+
+    span {
+      font-size: 1.4rem !important;
+    }
   }
 }

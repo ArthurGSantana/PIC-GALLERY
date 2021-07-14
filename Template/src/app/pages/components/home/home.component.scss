@@ -13,6 +13,7 @@ section {
   width: 100%;
   height: 85%;
   display: flex;
+  flex-wrap: wrap;
 
   .div-info, .div-cadastro {
     width: 50%;
@@ -26,6 +27,15 @@ section {
       align-items: center;
     }
   }
+}
 
+@media screen and (max-width: 1024px){
+  .div-cadastro, .div-info {
+    width: 100% !important;
+    height: auto !important;
+  }
 
+  .cadastro {
+    background-color: $toolbar-color;
+  }
 }
